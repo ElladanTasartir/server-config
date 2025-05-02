@@ -9,10 +9,10 @@ resource "hostinger_vps_post_install_script" "setup" {
 }
 
 resource "hostinger_vps" "portainer_vps" {
-  plan                   = "hostingercom-vps-kvm1-usd-1m"
+  plan                   = "hostingercombr-vps-kvm1-brl-1m"
   data_center_id         = 13
   template_id            = 1002
-  hostname               = "portainer.elladan.com.br"
+  hostname               = "portainer.elladan.com"
   password               = var.hostinger_vps_password
   ssh_key_ids            = [hostinger_vps_ssh_key.ssh_key.id]
   post_install_script_id = hostinger_vps_post_install_script.setup.id
